@@ -30,6 +30,6 @@ Esse comando sempre deve ser executado quando quiser iniciar o container do banc
 
 7- Para testar se os dados foram carregadaos corretamente, rode o comando:
                                 
-        make test
+        make test_db
 
 O resultado esperado é mostrar (print) o nome dos primeiros deputados cadastrados.
