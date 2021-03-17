@@ -1,0 +1,20 @@
+version: "3.1"
+services:
+  prlmntq_db:
+    image: mongo
+    container_name: prlmntq_db
+    restart: always
+    volumes:
+      - /data/db
+    ports:
+      - ${DB_PORT}:27017
+    environment:
+      MONGO_INITDB_DATABASE: ${DB_NAME}
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - prlmntq_net
+
+networks:
+  prlmntq_net:
+    external: true
