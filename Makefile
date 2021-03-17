@@ -1,14 +1,16 @@
 prepare_network:
 	docker network create prlmntq_net
 
-set_venv:
-	python3 -m venv env && source env/bin/activate && pip install -r requirements.txt 
+start-dev: 
+	docker-compose up 
 
-start_db:
-	docker-compose up
+install_requirements:
+	pip3 install -r requirements.txt
 
-populate_db:
-	python populate.py 
+populate:
+	python3 populate.py
 
-setup_db: prepare_network set_venv start_db populate_db
-	
+setup_db: install_requirements populate
+
+test_db:
+	python3 db_test.py
