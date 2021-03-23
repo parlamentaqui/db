@@ -68,6 +68,13 @@ class Tweet(Document):
     twitter_username = StringField()
     date = DateTimeField()
 
+class DBTest(Document):
+    message = StringField()
+
+db_test = DBTest(
+    message="OK :)"
+).save()
+
 ####### Populate #######
 
 
