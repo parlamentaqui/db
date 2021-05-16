@@ -26,10 +26,11 @@ Esse comando sempre deve ser executado quando quiser iniciar o container do banc
 
 6- Por ultimo, após o container do banco de dados inciar, abra um novo terminal em paralelo (zsh) (não feche o terminal do docker) e rode o comando:
         
-        setup_db
+        make setup_db
 
 7- Para testar se os dados foram carregadaos corretamente, rode o comando:
                                 
         make test_db
 
 O resultado esperado é mostrar (print) o nome dos primeiros deputados cadastrados.
+
